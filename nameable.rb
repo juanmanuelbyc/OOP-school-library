@@ -1,11 +1,8 @@
 # frozen_string_literal: true
 
+# Any instance that can be nameable
 class Nameable
-  def initialize(name)
-    @name = name
-  end
-
   def correct_name
-    raise NotImplementedError, 'Please implement the correct_name method'
+    raise NotImplementedError, 'correct_name method not implemented'
   end
 end

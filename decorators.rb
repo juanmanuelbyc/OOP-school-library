@@ -4,8 +4,9 @@ require './nameable'
 
 # BaseDecorator inherits from Nameable
 class BaseDecorator < Nameable
-    attr accessor :nameable
-    def initialize(nameable)
+  attr accessor :nameable
+
+  def initialize(nameable)
     @nameable = nameable
     super()
   end

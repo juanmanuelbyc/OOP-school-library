@@ -1,5 +1,10 @@
-class Person
-  def initialize(age, name = 'Unknown', parent_permision = true)
+# frozen_string_literal: true
+
+require './nameable'
+
+class Person < Nameable
+  def initialize(age, name = 'Unknown', parent_permision: true)
+    super name
     @id = Random.rand(1..1000)
     @age = age
     @name = name
@@ -10,12 +15,12 @@ class Person
   attr_reader :id
 
   def can_use_services?
-    is_of_age? || @parent_permision ? true : false
+    of_age? || @parent_permision ? true : false
   end
 
   private
 
-  def is_of_age?
+  def of_age?
     age >= 18
   end
 end

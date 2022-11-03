@@ -1,5 +1,3 @@
-# frozen_string_literal: true
-
 # Student class inherits from Person class
 class Book
   attr_accessor :title, :author, :rentals

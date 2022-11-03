@@ -1,6 +1,7 @@
 # Student class inherits from Person class
 class Classroom
-  attr_accessor :label, :students
+  attr_accessor :label
+  attr_reader :students
 
   def initialize(label)
     @label = label

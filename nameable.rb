@@ -1,5 +1,3 @@
-# frozen_string_literal: true
-
 # Any instance that can be nameable
 class Nameable
   def correct_name

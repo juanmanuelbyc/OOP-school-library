@@ -1,5 +1,3 @@
-# frozen_string_literal: true
-
 require './nameable'
 require './decorators'
 
@@ -11,9 +9,10 @@ class Person < Nameable
     @age = age
     @name = name
     @parent_permision = parent_permision
+    @rentals = []
   end
 
-  attr_accessor :age, :name
+  attr_accessor :age, :name, :rentals
   attr_reader :id
 
   def can_use_services?
@@ -28,6 +27,11 @@ class Person < Nameable
 
   def of_age?
     age >= 18
+  end
+
+  def add_rental(book, date)
+    @rentals.push(Rental.new(self, book, date))
+    book.rentals.push(Rental.new(self, book, date))
   end
 end
 

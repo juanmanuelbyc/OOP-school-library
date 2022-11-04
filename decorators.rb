@@ -2,7 +2,7 @@ require './nameable'
 
 # BaseDecorator inherits from Nameable
 class BaseDecorator < Nameable
-  attr accessor :nameable
+  attr_accessor :nameable
 
   def initialize(nameable)
     @nameable = nameable

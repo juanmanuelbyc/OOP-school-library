@@ -3,7 +3,7 @@ require './decorators'
 
 # Person Class inherits from Nameable
 class Person < Nameable
-  def initialize(age, name = 'Unknown', parent_permision: true)
+  def initialize(age, parent_permision, name = 'Unknown')
     super()
     @id = Random.rand(1..1000)
     @age = age
